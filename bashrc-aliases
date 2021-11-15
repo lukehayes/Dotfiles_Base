@@ -1,0 +1,21 @@
+source .config/luke-config/general-config
+
+## General Movement
+#------------------------------------------------------------
+alias asd="cd"
+alias d="cd Desktop"
+alias dv="cd Dev"
+
+
+## Pacman/Yay
+#------------------------------------------------------------
+alias pps="pacman -Ss"
+alias sps="sudo pacman -S"
+
+
+## C/C++
+#------------------------------------------------------------
+alias m="make"
+alias mc="make clean"
+alias a="./bin/app"
+
