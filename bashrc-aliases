@@ -19,3 +19,6 @@ alias m="make"
 alias mc="make clean"
 alias a="./bin/app"
 
+## Misc
+#------------------------------------------------------------
+alias ddd="upower -i /org/freedesktop/UPower/devices/battery_BAT0"
