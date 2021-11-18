@@ -11,6 +11,7 @@ alias d="cd $HOME/Dev"
 #------------------------------------------------------------
 alias pps="pacman -Ss"
 alias sps="sudo pacman -S"
+alias ys="yay -Ss"
 
 
 ## C/C++
