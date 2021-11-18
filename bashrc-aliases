@@ -4,7 +4,7 @@ source .config/luke-config/general-config
 #------------------------------------------------------------
 alias asd="cd"
 alias d="cd $HOME/Desktop"
-alias d="cd $HOME/Dev"
+alias dv="cd $HOME/Dev"
 
 
 ## Pacman/Yay
