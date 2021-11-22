@@ -20,3 +20,8 @@ alias m="make"
 alias mc="make clean"
 alias a="./bin/app"
 
+
+## Spotify
+#------------------------------------------------------------
+alias sp="spotifyd --config-path ~/.config/spotifyd/spotifyd.conf --no-daemon"
+
