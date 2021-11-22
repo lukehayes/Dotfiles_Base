@@ -21,6 +21,33 @@ function newLine()
     echo -e "\n"
 }
 
+# Print a message to the terminal
+function msg()
+{
+    echo -e "$1"
+}
+
+function finishedMsg()
+{
+    msg "\t ▩"
+    msg "\t ▩"
+    msg "\t ▩▩▩▩▩▩▩▩▩▩ → $1"
+    newLine
+}
+
+function bars()
+{
+    msg "▩ ▩ ▩"
+    newLine
+}
+
+function installUltimateVim()
+{
+    git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+    sh ~/.vim_runtime/install_awesome_vimrc.sh
+    finishedMsg "Installed Ultimate Vimrc!"
+    newLine
+}
 
 # ----------------------------------------
 # Move Configuration Files
@@ -30,8 +57,7 @@ function copyFile()
 {
     echo "Copying $1 to location $2"
     cp $1 $2
-    echo -e "\t ▩▩▩▩▩▩▩▩▩▩ → Finished moving $1"
-    echo -e "\n"
+    finishedMsg "Finished moving $1"
 }
 
 # Bash
@@ -54,15 +80,9 @@ cp "${PROJECT_DIR}/.zshrc" $HOME
 
 
 # ----------------------------------------
-# Copy Vim Config File
+# Install Ultimate Vimrc
 # ----------------------------------------
-echo -e "Copying $VIM_DIR/my_config.vim to $VIM_RUNTIME_DIR"
-newLine
-
-cp "$VIM_DIR/my_config.vim" $VIM_RUNTIME_DIR
-
-echo -e "Finished $VIM_DIR/my_config.vim to $VIM_RUNTIME_DIR"
-newLine
+installUltimateVim
 
 # ----------------------------------------
 # Clone Vim Plugins
@@ -72,22 +92,35 @@ echo "Cloning VIM plugins to $VIM_PLUGIN_DIR"
 cd $VIM_PLUGIN_DIR
 for i in "${VIM_PLUGINS[@]}"; do
     git clone $i
+    newLine
+    msg "Finised cloning $i"
+    finishedMsg "Cloned: $i"
 done
 
-echo -e "Cloning VIM plugins to $VIM_PLUGIN_DIR finished."
-newLine
+msg "Cloning VIM plugins to $VIM_PLUGIN_DIR finished."
 
 cd $PROJECT_DIR
+
+
+# ----------------------------------------
+# Copy Vim Config File
+# ----------------------------------------
+msg "Copying $VIM_DIR/my_configs.vim to $VIM_RUNTIME_DIR"
+
+cp "$VIM_DIR/my_configs.vim" $VIM_RUNTIME_DIR
+
+finishedMsg "Finished $VIM_DIR/my_configs.vim to $VIM_RUNTIME_DIR"
+
 
 # ----------------------------------------
 # Move Fonts Folder
 # ----------------------------------------
 
-echo -e "Copying $FONTS_DIR to $HOME/.fonts"
+msg "Copying $FONTS_DIR to $HOME/.fonts"
 newline
 cp -r $FONTS_DIR $HOME/.fonts
-echo "Finised $FONTS_DIR to $HOME/.fonts"
-newLine
+finishedMsg "Finised $FONTS_DIR to $HOME/.fonts"
 
-echo "☻ Script installation finished."
-echo -e "\n"
+finishedMsg "☻ Script installation finished. ☻"
+
+finishedMsg "Now go build something. ( ͡° ͜ʖ ͡°)"
