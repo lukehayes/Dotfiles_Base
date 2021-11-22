@@ -10,8 +10,9 @@ VIM_PLUGINS=(
     "git@github.com:preservim/nerdcommenter.git"
     "git@github.com:vimwiki/vimwiki.git"
     )
-FONTS_DIR="JetBrainsMono"
 PROJECT_DIR="$HOME/Desktop/Linux-Config"
+FONTS_DIR="JetBrainsMono"
+VIM_DIR="$PROJECT_DIR/Vim"
 
 
 # ----------------------------------------
@@ -37,6 +38,15 @@ copyFile "polybar/config.ini" $HOME/.config/polybar
 
 # SXHKD
 copyFile "sxhkd/sxhkdrc" $HOME/.config/sxhkd
+
+# ----------------------------------------
+# Copy Vim Config File
+# ----------------------------------------
+echo "Copying $VIM_DIR/my_config.vim to $VIM_RUNTIME_DIR"
+
+cp "$VIM_DIR/my_config.vim" $VIM_RUNTIME_DIR
+
+echo "Finished $VIM_DIR/my_config.vim to $VIM_RUNTIME_DIR"
 
 # ----------------------------------------
 # Clone Vim Plugins
