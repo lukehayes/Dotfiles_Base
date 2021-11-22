@@ -117,7 +117,7 @@ finishedMsg "Finished $VIM_DIR/my_configs.vim to $VIM_RUNTIME_DIR"
 # ----------------------------------------
 
 msg "Copying $FONTS_DIR to $HOME/.fonts"
-newline
+newLine
 cp -r $FONTS_DIR $HOME/.fonts
 finishedMsg "Finised $FONTS_DIR to $HOME/.fonts"
 
