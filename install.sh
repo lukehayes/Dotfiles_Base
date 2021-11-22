@@ -10,9 +10,16 @@ VIM_PLUGINS=(
     "git@github.com:preservim/nerdcommenter.git"
     "git@github.com:vimwiki/vimwiki.git"
     )
+CONFIG_DIR="$HOME/.config"
 PROJECT_DIR="$HOME/Desktop/Linux-Config"
 FONTS_DIR="JetBrainsMono"
 VIM_DIR="$PROJECT_DIR/Vim"
+
+# Make a new line
+function newLine()
+{
+    echo -e "\n"
+}
 
 
 # ----------------------------------------
@@ -39,14 +46,23 @@ copyFile "polybar/config.ini" $HOME/.config/polybar
 # SXHKD
 copyFile "sxhkd/sxhkdrc" $HOME/.config/sxhkd
 
+# Pulse - Equalizer settings etc.
+cp -r "${PROJECT_DIR}/pulse" $CONFIG_DIR
+
+# .ZSHRC
+cp "${PROJECT_DIR}/.zshrc" $HOME
+
+
 # ----------------------------------------
 # Copy Vim Config File
 # ----------------------------------------
-echo "Copying $VIM_DIR/my_config.vim to $VIM_RUNTIME_DIR"
+echo -e "Copying $VIM_DIR/my_config.vim to $VIM_RUNTIME_DIR"
+newLine
 
 cp "$VIM_DIR/my_config.vim" $VIM_RUNTIME_DIR
 
-echo "Finished $VIM_DIR/my_config.vim to $VIM_RUNTIME_DIR"
+echo -e "Finished $VIM_DIR/my_config.vim to $VIM_RUNTIME_DIR"
+newLine
 
 # ----------------------------------------
 # Clone Vim Plugins
@@ -58,7 +74,8 @@ for i in "${VIM_PLUGINS[@]}"; do
     git clone $i
 done
 
-echo "Cloning VIM plugins to $VIM_PLUGIN_DIR finished."
+echo -e "Cloning VIM plugins to $VIM_PLUGIN_DIR finished."
+newLine
 
 cd $PROJECT_DIR
 
@@ -66,9 +83,11 @@ cd $PROJECT_DIR
 # Move Fonts Folder
 # ----------------------------------------
 
-echo "Copying $FONTS_DIR to $HOME/.fonts"
+echo -e "Copying $FONTS_DIR to $HOME/.fonts"
+newline
 cp -r $FONTS_DIR $HOME/.fonts
 echo "Finised $FONTS_DIR to $HOME/.fonts"
+newLine
 
 echo "☻ Script installation finished."
 echo -e "\n"
