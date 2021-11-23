@@ -36,9 +36,9 @@ def msg(msg):
     """ Print a message to the screen """
     cmd(f"echo -e {msg}")
 
-def finishedMsg():
-    """docstring for finishedMsg"""
-    msg "\t ▩"
-    msg "\t ▩"
-    msg "\t ▩▩▩▩▩▩▩▩▩▩ → $1"
-    new_line
+def finishedMsg(m):
+    """ Print a finished message to the screen """
+    msg("\t ▩")
+    msg("\t ▩")
+    msg(f"\t ▩▩▩▩▩▩▩▩▩▩ → {m}")
+    new_line()
