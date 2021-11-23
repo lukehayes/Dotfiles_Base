@@ -98,16 +98,14 @@ copy_dir(linux_config_dir + "pulse", config_dir )
 # install_ultimate_vim()
 # install_vim_plugins()
 
-msg(f"Copying {vim_dir}my_configs.vim to {vim_runtime_dir}")
 copy_file(f"{vim_dir}my_configs.vim", vim_runtime_dir)
-finishedMsg("Finished {vim_runtime_dir}my_configs.vim to {vim_runtime_dir}")
+finishedMsg(f"Finished {vim_runtime_dir}my_configs.vim to {vim_runtime_dir}")
 
-msg(f"Copying {fonts_dir} to {home_dir}.fonts")
 copy_dir(fonts_dir, home_dir + ".fonts")
-finishedMsg("Finished {fonts_dir} to {home_dir}.fonts")
+finishedMsg(f"Finished {fonts_dir} to {home_dir}.fonts")
 
 finishedMsg("☻ Script installation finished. ☻")
-finishedMsg("Now go build something. ( ͡° ͜ʖ ͡°)")
+# finishedMsg("Now go build something. ( ͡° ͜ʖ ͡°)")
 
 
 
