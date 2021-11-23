@@ -1,2 +1,5 @@
 # Swap the escape key with the capslock key
-setxkbmap -option caps:swapescape
+
+setxkbmap -option caps:swapescape # Swap capslock with esc.
+
+setxkbmap -option caps:escape # Make capslock another esc.
