@@ -9,7 +9,7 @@ home_dir         = "/home/luke/"
 config_dir       = home_dir + ".config/"
 linux_config_dir = home_dir + "Desktop/Linux-Config/"
 
-vim_dir          = linux_config_dir + "Vim"
+vim_dir          = linux_config_dir + "Vim/"
 vim_runtime_dir  = home_dir + ".vim_runtime/"
 vim_plugin_dir   = vim_runtime_dir + "my_plugins"
 vim_plugins=[
@@ -96,8 +96,18 @@ copy_dir(linux_config_dir + "pulse", config_dir )
 
 
 # install_ultimate_vim()
+# install_vim_plugins()
 
-install_vim_plugins()
+msg(f"Copying {vim_dir}my_configs.vim to {vim_runtime_dir}")
+copy_file(f"{vim_dir}my_configs.vim", vim_runtime_dir)
+finishedMsg("Finished {vim_runtime_dir}my_configs.vim to {vim_runtime_dir}")
+
+msg(f"Copying {fonts_dir} to {home_dir}.fonts")
+copy_dir(fonts_dir, home_dir + ".fonts")
+finishedMsg("Finished {fonts_dir} to {home_dir}.fonts")
+
+finishedMsg("☻ Script installation finished. ☻")
+finishedMsg("Now go build something. ( ͡° ͜ʖ ͡°)")
 
 
 
