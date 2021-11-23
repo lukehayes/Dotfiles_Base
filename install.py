@@ -35,3 +35,10 @@ def new_line():
 def msg(msg):
     """ Print a message to the screen """
     cmd(f"echo -e {msg}")
+
+def finishedMsg():
+    """docstring for finishedMsg"""
+    msg "\t ▩"
+    msg "\t ▩"
+    msg "\t ▩▩▩▩▩▩▩▩▩▩ → $1"
+    new_line
