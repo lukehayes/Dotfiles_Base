@@ -53,7 +53,40 @@ def install_ultimate_vim():
 
 def copy_file(file, location):
     """ Copy a file to a location """
-    msg(f"Copying {file} → → → {location}")
+    msg(f"Copying FIlE: {file} → → → {location}")
     cmd(f"cp {file} {location}")
     finishedMsg(f"Finished moving {file}")
+
+def copy_dir(dir, location):
+    """ Copy a file to a location """
+    msg(f"Copying DIRECTORY: {dir} → → → {location}")
+    cmd(f"cp -r {dir} {location}")
+    finishedMsg(f"Finished moving directory {dir}")
+
+
+# ----------------------------------------
+# Linux Setup
+# ----------------------------------------
+
+# Bash
+copy_file("bashrc-aliases", config_dir + "luke-config/")
+
+# BSPWM
+copy_file("bspwm/keybindings", config_dir + "bspwm")
+
+# Polybar
+copy_file("polybar/config.ini", config_dir + "polybar")
+
+# SXHKD
+copy_file("sxhkd/sxhkdrc", config_dir + "sxhkd")
+
+# Pulse - Equalizer settings etc.
+copy_dir(linux_config_dir + "pulse", config_dir )
+
+
+
+
+
+
+
 
