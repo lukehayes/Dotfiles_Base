@@ -43,9 +43,17 @@ def finishedMsg(m):
     msg(f"\t ▩▩▩▩▩▩▩▩▩▩ → {m}")
     new_line()
 
+# Ultility Functions
 def install_ultimate_vim():
     """ Clone and install the Ultimate Vimrc """
     cmd("git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime")
     cmd("sh ~/.vim_runtime/install_awesome_vimrc.sh")
-    finishedMsg "Installed Ultimate Vimrc!"
+    finishedMsg("Installed Ultimate Vimrc!")
     new_line()
+
+def copy_file(file, location):
+    """ Copy a file to a location """
+    msg(f"Copying {file} → → → {location}")
+    cmd(f"cp {file} {location}")
+    finishedMsg(f"Finished moving {file}")
+
