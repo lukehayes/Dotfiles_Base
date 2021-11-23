@@ -43,6 +43,11 @@ def finishedMsg(m):
     msg(f"\t ▩▩▩▩▩▩▩▩▩▩ → {m}")
     new_line()
 
+def clone(repo, location):
+    msg(f"Cloning {repo}")
+    cmd(f"git clone {repo} {location}")
+    finishedMsg(f"Finised Cloning {repo}")
+
 # Ultility Functions
 def install_ultimate_vim():
     """ Clone and install the Ultimate Vimrc """
@@ -50,6 +55,12 @@ def install_ultimate_vim():
     cmd("sh ~/.vim_runtime/install_awesome_vimrc.sh")
     finishedMsg("Installed Ultimate Vimrc!")
     new_line()
+
+def install_vim_plugins():
+    for plugin in vim_plugins:
+        clone(plugin, linux_config_dir )
+        finishedMsg(plugin)
+
 
 def copy_file(file, location):
     """ Copy a file to a location """
@@ -84,7 +95,9 @@ copy_file("sxhkd/sxhkdrc", config_dir + "sxhkd")
 copy_dir(linux_config_dir + "pulse", config_dir )
 
 
+# install_ultimate_vim()
 
+install_vim_plugins()
 
 
 
