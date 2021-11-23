@@ -21,5 +21,17 @@ vim_plugins=[
 fonts_dir        = "JetBrainsMono"
 
 # ----------------------------------------
-#
+# Functions
 # ----------------------------------------
+
+# Command Line Helpers
+def cmd(shell_cmd):
+    """ Just a wrapper for os.system call """
+    os.system(shell_cmd)
+
+def new_line():
+    cmd("echo -e \n")
+
+def msg(msg):
+    """ Print a message to the screen """
+    cmd(f"echo -e {msg}")
