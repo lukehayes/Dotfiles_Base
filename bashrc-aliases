@@ -5,6 +5,7 @@ source .config/luke-config/general-config
 alias asd="cd"
 alias d="cd $HOME/Desktop"
 alias dv="cd $HOME/Dev"
+alias cw="cd $HOME/Dev/Bijou"
 
 
 ## Pacman/Yay
@@ -20,6 +21,11 @@ alias m="make"
 alias mc="make clean"
 alias a="./bin/app"
 
+## PHP/Composer
+#------------------------------------------------------------
+alias pp="php -S localhost:8000 -t public/"
+alias cpda="composer dump-autoload"
+alias cpin="composer install"
 
 ## Spotify
 #------------------------------------------------------------
