@@ -1,5 +1,5 @@
 " Initialization
-
+"
 set expandtab
 set shiftwidth=4
 set tabstop=4
@@ -11,11 +11,19 @@ set list
 set listchars=trail:.
 set guioptions-=T " Remove Toolbar
 set guioptions-=m " Remove Menubar
+set guioptions-=L " Remove Scrollbar
 set guioptions-=r " Remove Scrollbar
+set hlsearch
 
 " Includes
+"
 source ~/.vim_runtime/configs/keybindings.vim
 source ~/.vim_runtime/configs/functions.vim
 source ~/.vim_runtime/configs/plugin-init.vim
 source ~/.vim_runtime/configs/plugins.vim
+
+" Fonts/Colors
+"
+colorscheme base16-grayscale-dark
+set guifont=JetBrainsMono\ 11
 
