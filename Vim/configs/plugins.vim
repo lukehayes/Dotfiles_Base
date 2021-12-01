@@ -11,4 +11,6 @@ Plug 'chriskempson/base16-vim'
 
 Plug 'scrooloose/nerdcommenter'
 
+Plug 'jlanzarotta/bufexplorer'
+
 call plug#end()
