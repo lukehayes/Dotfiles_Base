@@ -9,6 +9,9 @@ set nowrap
 set linespace=8
 set list
 set listchars=trail:.
+set guioptions-=T " Remove Toolbar
+set guioptions-=m " Remove Menubar
 
 " Includes
-runtime configs/keybindings.vim
+source ~/.vim_runtime/configs/keybindings.vim
+
