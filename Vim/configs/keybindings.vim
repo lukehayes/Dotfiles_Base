@@ -1,24 +1,29 @@
-" -----------------------------------------------------------------------------
 " General
-" -----------------------------------------------------------------------------
+"
 let mapleader="'"
 nmap <SPACE> :
 nmap <leader>as :colorscheme<space>
+nmap <leader>w :w!<cr>
+map <silent> <leader><cr> :noh<cr>
 
-" -----------------------------------------------------------------------------
 " Movement
-" -----------------------------------------------------------------------------
+"
 nmap <silent> <C-h> <C-w>h
 nmap <silent> <C-j> <C-w>j
 nmap <silent> <C-k> <C-w>k
 nmap <silent> <C-l> <C-w>l
 
-" -----------------------------------------------------------------------------
-" NERD Tree
-" -----------------------------------------------------------------------------
-nmap <leader>n :NERDTreeToggle<cr>
+" Buffers
+"
+"map <leader>bd :Bclose<cr>     " Close current buffer
+map <leader>ba :1,1000 bd!<cr> " Close all buffers
+map <leader>bd :q<cr>     " Close current buffer
 
-" -----------------------------------------------------------------------------
+
+" NERDTree
+"
+nmap <leader>nn :NERDTreeToggle<cr>
+
 " Goyo
-" -----------------------------------------------------------------------------
-nmap <leader>z :Goyo<cr>
+"
+nmap <silent> <leader>z :Goyo<cr>
