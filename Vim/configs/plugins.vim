@@ -13,4 +13,8 @@ Plug 'scrooloose/nerdcommenter'
 
 Plug 'jlanzarotta/bufexplorer'
 
+Plug 'tpope/vim-fugitive'
+
+Plug 'flazz/vim-colorschemes'
+
 call plug#end()
