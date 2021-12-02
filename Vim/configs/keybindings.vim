@@ -23,6 +23,13 @@ map <leader>bd :Bclose<cr>
 map <leader>ba :1,1000 bd!<cr>
 "map <leader>bd :q<cr>     " Close current buffer
 
+" Bash style movement
+cnoremap <C-A>		<Home>
+cnoremap <C-E>		<End>
+cnoremap <C-K>		<C-U>
+cnoremap <C-P> <Up>
+cnoremap <C-N> <Down>
+
 " NERDTree
 "
 nmap <leader>nn :NERDTreeToggle<cr>
