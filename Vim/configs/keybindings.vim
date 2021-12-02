@@ -19,6 +19,9 @@ nmap <silent> <C-l> <C-w>l
 map <leader>ba :1,1000 bd!<cr> " Close all buffers
 map <leader>bd :q<cr>     " Close current buffer
 
+map <leader>bd :Bclose<cr>
+map <leader>ba :1,1000 bd!<cr>
+"map <leader>bd :q<cr>     " Close current buffer
 
 " NERDTree
 "
