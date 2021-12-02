@@ -33,3 +33,6 @@ nmap <silent> <leader>z :Goyo<cr>
 
 " BufExplorer
 map <leader>o :BufExplorer<cr>
+
+" Vim Fugitive
+nmap <leader>gg :Git commit -m ""<left>
