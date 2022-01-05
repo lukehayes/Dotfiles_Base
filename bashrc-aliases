@@ -27,6 +27,15 @@ alias pp="php -S localhost:8000 -t public/"
 alias cpda="composer dump-autoload"
 alias cpin="composer install"
 
+## Ruby/Rails
+#------------------------------------------------------------
+alias r="rails"
+alias rs="r server"
+alias rs="r server"
+alias rc="r console"
+alias rdm="r db:migrate"
+alias rds="r db:seed"
+
 ## Spotify
 #------------------------------------------------------------
 alias sp="spotifyd --config-path ~/.config/spotifyd/spotifyd.conf --no-daemon"
