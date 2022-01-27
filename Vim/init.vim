@@ -14,6 +14,7 @@ set guioptions-=m " Remove Menubar
 set guioptions-=L " Remove Scrollbar
 set guioptions-=r " Remove Scrollbar
 set hlsearch
+set guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
 
 " Includes
 "
