@@ -26,5 +26,6 @@ source ~/.vim_runtime/configs/plugins.vim
 " Fonts/Colors
 "
 colorscheme base16-grayscale-dark
+colorscheme zazen
 set guifont=JetBrainsMono\ 11
 
