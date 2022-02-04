@@ -14,6 +14,7 @@ set         guioptions-=r " Remove Scrollbar
 set         hlsearch
 set         guiligatures=!\"#$%&()*+-./:<=>?@[]^_{\|~
 set         guifont=JetBrainsMono\ 11
+set         statusline=%f\%m%r%h%w%=\ %l\ %p%%\ \%L " :h statusline for flags
 
 source      ~/.vim_runtime/configs/keybindings.vim
 source      ~/.vim_runtime/configs/functions.vim
